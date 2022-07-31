@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Blackjack Page</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <!--NOTE Used to initiate a function when page loads-->
+  <body onload="loadBjHtml()">
+    <script src="./scripts/bjdeck.js"></script>
+    <div class="navBar">
+      <a class="curPage" href="./blackjack.html">Blackjack</a>
+    </div>
+    <div id="headerWrapper" style="margin-top: 20px">
+      <!--Float allows elements to go on the right-->
+      <div style="float: left; width: 500px; font-size: 2em; font-weight: bold; color: green">
+        Welcome to the Table!
+      </div>
+    </div>
+    <!-- Container for dealer cards -->
+    <div>
+      <h1 style="clear: left; margin: 0%">Dealer:</h1>
+      <div id="dWrapperBj">
+        <img
+          style="width: 75px; height: 120px; margin: 20px"
+          class="pokercard"
+          id="dealer1"
+          src="./images/pokercards/backcard.jpg"
+        />
+        <img
+          style="width: 75px; height: 120px; margin: 20px"
+          class="pokercard"
+          id="dealer2"
+          src="./images/pokercards/backcard.jpg"
+        />
+      </div>
+      <p id="dValueText" style="font-size: 20px; margin: 0%">Dealer Hand: ?</p>
+    </div>
+    <!-- Container for player cards -->
+    <div>
+      <h1 style="margin: 0%">Player:</h1>
+      <div id="pWrapperBj">
+        <img
+          style="width: 75px; height: 120px; margin: 20px"
+          class="pokercard"
+          id="player1"
+          src="./images/pokercards/backcard.jpg"
+        />
+        <img
+          style="width: 75px; height: 120px; margin: 20px"
+          class="pokercard"
+          id="player2"
+          src="./images/pokercards/backcard.jpg"
+        />
+      </div>
+      <p id="pValueText" style="font-size: 20px; margin: 0%">Player Hand:</p>
+      <!-- Buttons for player to click -->
+      <button id="hitBjButton" style="margin-left: 20px; margin: 10px" onclick="hitBjHtml()">Hit</button>
+      <button id="standBjButton" onclick="standBjHtml()">Stand</button>
+    </div>
+    <div class="wrapDivAlign">
+      <h1 id="bjstatus" style="color: blue">--Game in progress--</h1>
+      <button id="playBjButton" style="margin-left: 20px" onclick="resetBjHtml()" hidden>Play Again</button>
+    </div>
+  </body>
+</html>

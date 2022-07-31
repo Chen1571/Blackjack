@@ -1,0 +1,88 @@
+html,
+body {
+  width: 100%;
+  height: 1000px;
+  min-height: 100%;
+  position: relative;
+  margin: 0;
+}
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+body {
+  background-color: white;
+  font-family: "Open Sans", sans-serif;
+}
+button {
+  border: 2px solid rgb(46, 151, 199);
+  padding: 10px;
+  border-radius: 8px;
+  background-color: white;
+  font-size: 20px;
+  cursor: pointer;
+}
+button:hover {
+  background-color: rgb(46, 151, 199);
+  color: white;
+}
+button:disabled {
+  border: 2px solid gray;
+  pointer-events: none;
+}
+label {
+  font-size: 20px;
+}
+select {
+  border: 2px solid rgb(181, 46, 199);
+  background-color: white;
+  font-size: 20px;
+}
+/* FOR ELEMENT CLASSES */
+.navBar {
+  width: 100%;
+  height: 65px;
+  background-color: rgba(0, 0, 0, 0.8);
+  color: black;
+}
+.navBar a {
+  color: white;
+  height: 25px;
+  font-size: 20px;
+  padding: 20px;
+  /* Pushes down text from top because part of body now, some space at top*/
+  float: left;
+  text-decoration: none;
+}
+.navBar a:hover {
+  background-color: rgba(0, 0, 0, 0.9);
+}
+.navBar a.curPage {
+  background-color: rgba(44, 207, 93, 0.8);
+}
+.wrapDivAlign {
+  display: flex;
+  align-items: center;
+}
+/* FOR ELEMENT IDS */
+#hitBjButton {
+  width: 75px;
+  border: 2px solid rgba(44, 207, 93, 0.8);
+}
+#hitBjButton:hover {
+  background-color: rgba(44, 207, 93, 0.8);
+  color: white;
+}
+#standBjButton {
+  width: 75px;
+  border: 2px solid rgba(219, 45, 45, 0.931);
+}
+#standBjButton:hover {
+  background-color: rgba(219, 45, 45, 0.931);
+  color: white;
+}
+#bjstatus {
+  /* Allows a button to go to the next of the header */
+  float: left;
+}
